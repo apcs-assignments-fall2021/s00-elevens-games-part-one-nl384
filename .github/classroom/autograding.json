@@ -39,6 +39,16 @@
       "comparison": "included",
       "timeout": 10,
       "points": 1
+    },
+    {
+      "name": "Deal",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testDeal",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
   ]
 }
