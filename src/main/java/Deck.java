@@ -52,8 +52,13 @@ public class Deck {
 	// Updates the size as well
 	public Card deal() {
 		// YOUR CODE HERE
-		size--;
-		return cards.get(size);
+		if (size != 0) {
+			size--;
+			return cards.get(size);
+		}
+		else {
+			return null;
+		}
 	}
 
 	// Shuffles the deck by repeatedly randomly swapping pairs of cards
@@ -65,6 +70,8 @@ public class Deck {
 			cards.set(rand, cards.get(i));
 			cards.set(i, temp);
 		}
+
+		this.size = cards.size();
 	}
 
 	// OPTIONAL: Write code that carries out a "perfect" shuffle
